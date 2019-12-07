@@ -47,7 +47,7 @@
       success: function(resp){
      console.log(resp);
      let html = template('categoryTpl',{data:resp});
-     console.log(html)
+     //console.log(html)
       // 分类的id筛选分类
       $('#categoryBox').html(html);
       }
@@ -64,8 +64,11 @@ $("#filterForm").on('submit',function(){
           url:'/posts',
           data:formData,
           success: function(response){
+                console.log(response);
               let html =template('postsTpl',response);
+
               $('#postsBox').html(html);
+             // console.log(html)
 
               let page = template('pageTpl',response);
               $("#page").html(page);
