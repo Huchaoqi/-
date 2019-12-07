@@ -1,4 +1,4 @@
- // 向服务器发送请求 获取文字分类数据
+ // 向服务器发送请求 获取文章分类数据
 
 $.ajax({
     url:'/categories',
@@ -37,6 +37,7 @@ $('#feature').on('change',function(){
         }
     })
 })
+ // 添加文件表单提交的时候
 
 $('#addForm').on('submit',function(){
     let formData = $(this).serialize();
@@ -49,5 +50,7 @@ $('#addForm').on('submit',function(){
             location.href = '/admin/posts.html'
         }
     })
+    //阻止表单默认行为
+    
     return false;
 })

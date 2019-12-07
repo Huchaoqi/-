@@ -110,8 +110,13 @@
     <script type = 'text/html' id="categoryListTpl">
       {{each data}}
       <tr>
+         
           <td class="text-center"><input type="checkbox"></td>
-          <td>{{$value.title}}</td>
+          
+          <td>
+              <i class="fa {{$value.className}}"></i>
+             {{$value.title}}
+          </td>
           <td class="text-center">
             <a href="javascript:;" class="btn btn-info btn-xs edit" data-id="{{$value._id}}">编辑</a>
             <a href="javascript:;" class="btn btn-danger btn-xs delete" data-id="{{$value._id}}">删除</a>

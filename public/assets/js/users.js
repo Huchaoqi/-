@@ -134,8 +134,9 @@ $('#userForm').on('submit',function(){
      // 当全选 按钮状态发送改变时
     selectAll.on('change',function(){
         //获取到全选按钮当前的 状态
+         //  console.log(typeof this)
         let status = $(this).prop('checked');
-
+ 
         if(status){
             //显示批量删除按钮
 
@@ -160,6 +161,7 @@ $('#userForm').on('submit',function(){
          }else{
              selectAll.prop('check',false)
          }
+         
          // r如果选中的复选框数量大于0 说明有选中的复选框
          if(inputs.filter(':checked').length> 0){
              deleteMany.show();

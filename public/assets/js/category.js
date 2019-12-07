@@ -42,9 +42,10 @@ $('#categoryBox').on('click','.edit',function(){
          type:'get',
          url:'/categories/'+id,
          success: function(response){
-               console.log(response)
-             let html =template('modifyCategoryTpl',response);
-             $('#formBox').html(html);
+             //  console.log(response)
+           let html =template('modifyCategoryTpl',response);
+             
+           $('#formBox').html(html);
          }
      })
 
@@ -77,7 +78,7 @@ $('#formBox').on('submit',"#modifyCategory",function(){
 
 
 $('#categoryBox').on('click','.delete',function(){
-    if(confirm('确定要删除操作吗>')){
+    if(confirm('确定要删除分类吗?')){
         // 获取要删除的分类数据id 
         let id = $(this).attr('data-id');
 
