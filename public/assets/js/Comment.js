@@ -68,5 +68,5 @@ const validateComment = comment => {
 }
 
 // 导出模块成员
-module.exports = {
-	Comment,
+// module.exports = {
+// 	Comment}
